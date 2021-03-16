@@ -4,29 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>H&M Home</title>
 </head>
 
 <body>
-    <div class="hamburger-menu">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+
+    <section class="mobile-nav">
+        <div id="content-mobile">
+        <a href=""><i class="fas fa-search"></i></a>
+        <a href=""><i class="far fa-user"></i></a>
+        <a href=""><i class="far fa-heart"></i></a>
+        <a href=""><i class="fas fa-shopping-basket"></i></a>
+        </div>
+    </section>
+
+
+    <div class="slider-container">
+        <a href="#" class="slider-trigger"><i class="fas fa-bars fa-lg"></i></a>
+        <div class="slider-parent">
+          
+            
+
+          <ul class="dropdown-list-slider">
+            <div class="list-style">
+              <li class="list"><a href="#">New Arrivals</a></li>
+            </div>
+    
+            <div class="list-style">
+              <li class="list"><a href="#">Shop by Room</a></li>
+            </div>
+    
+            <div class="list-style">
+              <li class="list"><a href="#">Shop by Room</a></li>
+            </div>
+    
+            <div class="list-style">
+              <li class="list"><a href="#">Shop by Product</a></li>
+            </div>
+    
+            <div class="list-style">
+            <li class="list"><a href="#">Shop by Concept</a></li>
+            </div>
+        </ul>
+
+        </div>
+      </div>
+   
+    <script>
+        var sliderTrigger = document.getElementsByClassName("slider-trigger")[0];
+        var slider = document.getElementsByClassName('slider-parent')[0];
+        sliderTrigger.addEventListener( "click" , function(el) {
+            if(slider.classList.contains("active")){
+                slider.classList.remove("active");
+            } else {
+                slider.classList.add("active");
+            }
+        });
+    </script>
+
+    
 
   <header>
     <nav class="menu">
         <ul class="nav-menu">
             <li class="nav-item"><a href="#"><img class="logo" src="images/hm-home.jpg" alt="logo"></a></li>
-            <li class="nav-item"><a href="#"></a><label class="search-bar" for="search">Search</label>
+            <li class="nav-item mobile-item"><a href="#"></a><label class="search-bar" for="search">Search</label>
             <input type="text"></a></li>
             
-            <li class="nav-item">Sign In</li>
-            <li class="nav-item">Favourites</li>
-            <li class="nav-item">Cart</li>
+            <li class="nav-item mobile-item">Sign In</li>
+            <li class="nav-item mobile-item">Favourites</li>
+            <li class="nav-item mobile-item">Cart</li>
         </ul>
     </nav>
 </header>
+
+
 
   <main>
     <nav class="second-menu">
@@ -92,6 +146,16 @@
                 <li><a href="#">Cookie Settings</a></li>
             </ul>
         </div>
+    </div>
+
+    <div class="social-media-footer">
+        <ul class="social-content">
+            <li class="media"><a href="#"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li class="media"><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li class="media"><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="media"><a href="#"><i class="fab fa-youtube fa-lg"></i></a></li>
+            <li class="media"><a href="#"><i class="fab fa-pinterest fa-lg"></i></i></a></li>
+        </ul>
     </div>
 
      
